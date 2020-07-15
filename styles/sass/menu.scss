@@ -1,0 +1,26 @@
+.menu-container{
+    height: 100px;
+    width: 100%;
+}
+.logo{
+    width: 275px;
+    height: 265px;
+    margin-top: -65px;
+    margin-left: 15px;
+}
+.mediaicons{
+    float: right;
+    margin-top: 30px;
+    margin-right: 75px;
+    color: white;
+    font-size:  66px;
+    cursor: pointer;
+    
+    i {
+        opacity: 0.8;
+        margin-left: 25px;
+    }
+    i:hover{
+        opacity: 1;
+    }
+}

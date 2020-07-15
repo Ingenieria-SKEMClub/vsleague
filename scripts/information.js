@@ -1,0 +1,1 @@
+ReactDOM.render(<Menu/>, document.getElementById("menu-container"))

@@ -1,0 +1,19 @@
+// Other CSS references
+@import url("menu.css");
+
+// Sass components
+%bg-image{
+    background: url("../../images/background.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black;
+    margin: 0 auto;
+}
+
+// Css components
+body, html {
+    @extend %bg-image;
+}
+
