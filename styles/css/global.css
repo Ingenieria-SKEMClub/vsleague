@@ -1,4 +1,5 @@
 @import url("menu.css");
+@import url("content.css");
 body, html {
   background: url("../../images/background.png") no-repeat center center fixed;
   -webkit-background-size: cover;
