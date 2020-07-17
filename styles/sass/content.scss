@@ -1,5 +1,16 @@
-.item1 { grid-area: character; height: 622px;}
-.item2 { grid-area: register; height: 371px;}
+@keyframes characterAnimation {
+  from{
+    margin-left: -150px;
+    opacity: 0;
+  }to{
+    margin-left: -100px;
+    opacity: 1;
+  }
+}
+
+body{
+  overflow-y: hidden;
+}
 .sponsors {
   text-align: center;
   height: 140px;
@@ -10,25 +21,26 @@
   margin: -140px 10px 0px 0px;
 }
 .content-container {
+  height: 100vh;
   display: grid;
-  grid-template-areas:
-  'character character register register register register'
-  'character character register register register register'
-  'character character . . . .';
-  grid-template-rows: auto auto 10%;
   grid-gap: 1px;
+  grid-template-columns: auto auto;
   width: 100%;
 }
 .content-container > div {
   text-align: center;
-  padding: 65px 0;
   font-size: 30px;
 }
+.item1{
+  align-self: flex-end;
+}
 .character {
-  height: 665px;
-  margin-left: -55px;
-  margin-top: -108px;
-  margin-bottom: -12px;width: 540px;
+  opacity: 0;
+  height: 90vh;
+  margin-bottom: -25px;
+  margin-left: -150px;
+  animation: characterAnimation 1s forwards;
+  animation-delay: 1s;
 }
 .sponsorimg{
   height: 64px;
