@@ -3,7 +3,11 @@ class Content extends React.Component {
         return(
             <div className="content-container">
                 <div class="item1"><img src="images/character.png" className="character"></img></div>
-                <div class="item2"></div>
+                <div class="item2">
+                    <h1>¡UNETE AL JUEGO!</h1>
+                    <h2>EL TORNEO DE FIFA DEL AÑO</h2>
+                    <input type="button" className="register"value="Inscribirme"></input>
+                </div>
             </div>
         );
     };
