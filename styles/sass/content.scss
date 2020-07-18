@@ -92,6 +92,42 @@ body{
   width: 64px;
   padding: 5px;
 }
+@media screen and (max-height: 400px) {
+  footer {
+    display: none;
+  }
+  .item1{
+    margin-left: -42px;
+  }
+  .character {
+    height: 137%;
+    width: 115%;
+  }
+  .mediaicons {
+    display: none;
+  }
+  .item2{
+      margin-left: -8px;
+      margin-top: -115px;
+      
+  h1 {
+    font-size: 150%;
+    height: 30px;
+  }
+  h2 {
+    font-size: 46%;
+  }  
+    .register{
+      width: 50%;
+      font-size: 80%;
+    }
+  }
+  .character{
+    margin-left: -50px;
+    height: 55vh;
+    width: 43vh;
+  }
+}
 @media screen and (max-width: 800px) {
   footer {
     display: none;
