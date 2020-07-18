@@ -1,9 +1,18 @@
+$font: "Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif";
+$weight: 900;
 @keyframes characterAnimation {
   from{
     margin-left: -150px;
     opacity: 0;
   }to{
     margin-left: -100px;
+    opacity: 1;
+  }
+}
+@keyframes registerAnimation {
+  from{
+    opacity: 0;
+  }to{
     opacity: 1;
   }
 }
@@ -15,7 +24,7 @@ body{
   text-align: center;
   height: 140px;
   font-size: large;
-   font-family: "Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif";
+   font-family: $font;
   color: white;
   float: right;
   margin: -140px 10px 0px 0px;
@@ -24,7 +33,7 @@ body{
   height: 100vh;
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 35% 64%;
   width: 100%;
 }
 .content-container > div {
@@ -33,6 +42,41 @@ body{
 }
 .item1{
   align-self: flex-end;
+  padding-left: 150px;
+}
+.item2{
+  padding-top: 210px;
+  text-align: center;
+  font-family: $font;
+  color: white;
+  h1{
+    font-size: 346%;
+    height: 80px;
+    font-weight: $weight;
+  }
+  h2{
+    font-size: 110%;
+    font-weight: $weight;
+  }
+  .register{
+    background: #ac2c3f;
+    border: none;
+    border-radius: 50px;
+    height: 9%;
+    width: 18%;
+    color: white;
+    font-family: $font;
+    font-weight: $weight;
+    padding-top: 22px;
+    padding-bottom: 59px;
+  }
+  .register:hover {
+    background: white;
+    color: #ac2c3f
+  }
+  opacity: 0;
+  animation: registerAnimation 2s forwards;
+  animation-delay: 2s;
 }
 .character {
   opacity: 0;
@@ -42,6 +86,7 @@ body{
   animation: characterAnimation 1s forwards;
   animation-delay: 1s;
 }
+
 .sponsorimg{
   height: 64px;
   width: 64px;
@@ -51,11 +96,34 @@ body{
   footer {
     display: none;
   }
+  .item1{
+    margin-left: -42px;
+  }
   .character {
     height: 137%;
-  width: 115%;
+    width: 115%;
   }
   .mediaicons {
-    margin-top: -85px;
-}
+    display: none;
+  }
+  .item2{
+      margin-left: -128px;
+      margin-top: -100px;
+      
+  h1 {
+    font-size: 150%;
+  }
+  h2 {
+    font-size: 46%;
+  }  
+    .register{
+      width: 50%;
+      font-size: 80%;
+    }
+  }
+  .character{
+    margin-left: -50px;
+    height: 55vh;
+    width: 43vh;
+  }
 }
