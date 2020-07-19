@@ -4,9 +4,9 @@ class Content extends React.Component {
             <div className="content-container">
                 <div class="item1"><img src="images/character.png" className="character"></img></div>
                 <div class="item2">
-                    <h1>¡UNETE AL JUEGO!</h1>
+                    <h1>¡ÚNETE AL JUEGO!</h1>
                     <h2>EL TORNEO DE FIFA DEL AÑO</h2>
-                    <input type="button" className="register"value="Inscribirme"></input>
+                    <a id='register' class="waves-effect waves-light btn">Inscribirme</a>
                 </div>
             </div>
         );
@@ -17,7 +17,6 @@ class Sponsors extends React.Component {
         return(
             <div className="sponsors">
                 <p>PATROCINADO POR</p>
-                <img src="images/sponsor1.png" className="sponsorimg"></img>
                 <img src="images/sponsor2.png" className="sponsorimg"></img>
             </div>
         );

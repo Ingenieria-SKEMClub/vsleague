@@ -1,4 +1,4 @@
-$font: "Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif";
+$font: "Provicali";
 $weight: 900;
 @keyframes characterAnimation {
   from{
@@ -18,7 +18,7 @@ $weight: 900;
 }
 
 body{
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .sponsors {
   text-align: center;
@@ -27,13 +27,15 @@ body{
    font-family: $font;
   color: white;
   float: right;
-  margin: -140px 10px 0px 0px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 .content-container {
   height: 100vh;
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: 35% 64%;
+  grid-template-columns: 1.25fr 1.75fr;
   width: 100%;
 }
 .content-container > div {
@@ -42,37 +44,37 @@ body{
 }
 .item1{
   align-self: flex-end;
-  padding-left: 150px;
+  justify-self: right;
+  justify-content: right;
+  text-align: center;
 }
 .item2{
-  padding-top: 210px;
+  align-self: center;
   text-align: center;
   font-family: $font;
   color: white;
   h1{
-    font-size: 346%;
+    font-size: 100px;
     height: 80px;
     font-weight: $weight;
   }
   h2{
-    font-size: 110%;
-    font-weight: $weight;
+    margin-top: 15px;
+    font-size: 45px;
   }
-  .register{
-    background: #ac2c3f;
+  #register{
+    background-color: #63000f;
     border: none;
     border-radius: 50px;
     height: 9%;
-    width: 18%;
+    font-size: 22px;
     color: white;
     font-family: $font;
-    font-weight: $weight;
-    padding-top: 22px;
-    padding-bottom: 59px;
+    transition: 0.3s;
+    padding: 15px 20px
   }
-  .register:hover {
-    background: white;
-    color: #ac2c3f
+  .register:focus{
+    outline: none;
   }
   opacity: 0;
   animation: registerAnimation 2s forwards;
@@ -86,80 +88,105 @@ body{
   animation: characterAnimation 1s forwards;
   animation-delay: 1s;
 }
-
 .sponsorimg{
   height: 64px;
   width: 64px;
   padding: 5px;
 }
-@media screen and (max-height: 400px) {
-  footer {
-    display: none;
-  }
-  .item1{
-    margin-left: -42px;
-  }
-  .character {
-    height: 137%;
-    width: 115%;
-  }
-  .mediaicons {
-    display: none;
-  }
+@media screen and (max-width: 1620px){
   .item2{
-      margin-left: -8px;
-      margin-top: -115px;
-      
-  h1 {
-    font-size: 150%;
-    height: 30px;
-  }
-  h2 {
-    font-size: 46%;
-  }  
-    .register{
-      width: 50%;
-      font-size: 80%;
+    h1{
+      font-size: 80px;
+      height: 80px;
+      font-weight: $weight;
     }
-  }
-  .character{
-    margin-left: -50px;
-    height: 55vh;
-    width: 43vh;
+    h2{
+      margin-top: 15px;
+      font-size: 45px;
+      font-weight: $weight;
+    }
   }
 }
-@media screen and (max-width: 800px) {
-  footer {
-    display: none;
-  }
-  .item1{
-    margin-left: -42px;
-  }
-  .character {
-    height: 137%;
-    width: 115%;
-  }
-  .mediaicons {
-    display: none;
-  }
+@media screen and (max-width: 1300px){
   .item2{
-      margin-left: -128px;
-      margin-top: -100px;
-      
-  h1 {
-    font-size: 150%;
-  }
-  h2 {
-    font-size: 46%;
-  }  
-    .register{
-      width: 50%;
-      font-size: 80%;
+    h1{
+      font-size: 60px;
+      font-weight: $weight;
+      margin: 0;
+    }
+    h2{
+      font-size: 35px;
+      font-weight: $weight;
     }
   }
-  .character{
-    margin-left: -50px;
-    height: 55vh;
-    width: 43vh;
+}
+@media screen and (max-width: 1100px){
+  .character {
+    opacity: 0;
+    height: 70vh;
+    margin-bottom: -25px;
+    margin-top: 25px;
+  }
+  .content-container {
+    height: 100vh;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .item1{
+      width: 100%;
+      justify-content: center;
+      justify-self: center;
+    }
+  .item2{
+    justify-content: center;
+    justify-self: center;
+    margin-top: 150px;
+    grid-row-start: 1;
+    h1{
+      font-size: 60px;
+      font-weight: $weight;
+      margin: 0;
+    }
+    h2{
+      font-size: 35px;
+      font-weight: $weight;
+    }
+  }
+  .sponsors{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px){
+  .item2{
+    justify-content: center;
+    justify-self: center;
+    margin-top: 150px;
+    grid-row-start: 1;
+    h1{
+      font-size: 40px;
+      font-weight: $weight;
+      margin: 0;
+      height: 40px;
+    }
+    h2{
+      font-size: 20px;
+      font-weight: $weight;
+    }
+  }
+}
+@media screen and (max-width: 373px){
+  .item2{
+    h1{
+      font-size: 40px;
+      font-weight: $weight;
+      margin: 0;
+      height: 80px;
+    }
+    h2{
+      font-size: 20px;
+      font-weight: $weight;
+    }
   }
 }

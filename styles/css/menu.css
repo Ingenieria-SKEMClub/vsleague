@@ -27,4 +27,62 @@
   opacity: 1;
 }
 
+.mediaIconsAnchors {
+  color: white;
+}
+
+#sideNavButtonBar {
+  position: fixed;
+  bottom: 0;
+  display: fixed;
+  bottom: 80px;
+  margin: 0 auto;
+  z-index: 999;
+  text-align: center;
+  width: 100%;
+}
+
+#sideNavButton {
+  background-color: #007b80;
+  border-radius: 50%;
+  padding: 7px;
+  border: none;
+  display: none;
+}
+
+#sideNavIcon {
+  font-size: 44px;
+  color: white;
+}
+
+#sideNav {
+  background-color: black;
+  width: 140px;
+}
+#sideNav .mediaicons {
+  text-align: center;
+  margin-right: 15px !important;
+}
+
+@media screen and (max-width: 650px) {
+  .menu-container {
+    text-align: center;
+  }
+
+  .logo {
+    width: 275px;
+    height: 265px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  #fullicons {
+    display: none;
+  }
+
+  #sideNavButton {
+    display: initial;
+  }
+}
+
 /*# sourceMappingURL=menu.css.map */

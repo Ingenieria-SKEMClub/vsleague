@@ -17,24 +17,26 @@
   }
 }
 body {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .sponsors {
   text-align: center;
   height: 140px;
   font-size: large;
-  font-family: "Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif";
+  font-family: "Provicali";
   color: white;
   float: right;
-  margin: -140px 10px 0px 0px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .content-container {
   height: 100vh;
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: 35% 64%;
+  grid-template-columns: 1.25fr 1.75fr;
   width: 100%;
 }
 
@@ -45,42 +47,42 @@ body {
 
 .item1 {
   align-self: flex-end;
-  padding-left: 150px;
+  justify-self: right;
+  justify-content: right;
+  text-align: center;
 }
 
 .item2 {
-  padding-top: 210px;
+  align-self: center;
   text-align: center;
-  font-family: "Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif";
+  font-family: "Provicali";
   color: white;
   opacity: 0;
   animation: registerAnimation 2s forwards;
   animation-delay: 2s;
 }
 .item2 h1 {
-  font-size: 346%;
+  font-size: 100px;
   height: 80px;
   font-weight: 900;
 }
 .item2 h2 {
-  font-size: 110%;
-  font-weight: 900;
+  margin-top: 15px;
+  font-size: 45px;
 }
-.item2 .register {
-  background: #ac2c3f;
+.item2 #register {
+  background-color: #63000f;
   border: none;
   border-radius: 50px;
   height: 9%;
-  width: 18%;
+  font-size: 22px;
   color: white;
-  font-family: "Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif";
-  font-weight: 900;
-  padding-top: 22px;
-  padding-bottom: 59px;
+  font-family: "Provicali";
+  transition: 0.3s;
+  padding: 15px 20px;
 }
-.item2 .register:hover {
-  background: white;
-  color: #ac2c3f;
+.item2 .register:focus {
+  outline: none;
 }
 
 .character {
@@ -98,83 +100,99 @@ body {
   padding: 5px;
 }
 
-@media screen and (max-height: 400px) {
-  footer {
-    display: none;
-  }
-
-  .item1 {
-    margin-left: -42px;
-  }
-
-  .character {
-    height: 137%;
-    width: 115%;
-  }
-
-  .mediaicons {
-    display: none;
-  }
-
-  .item2 {
-    margin-left: -8px;
-    margin-top: -115px;
-  }
+@media screen and (max-width: 1620px) {
   .item2 h1 {
-    font-size: 150%;
-    height: 30px;
+    font-size: 80px;
+    height: 80px;
+    font-weight: 900;
   }
   .item2 h2 {
-    font-size: 46%;
-  }
-  .item2 .register {
-    width: 50%;
-    font-size: 80%;
-  }
-
-  .character {
-    margin-left: -50px;
-    height: 55vh;
-    width: 43vh;
+    margin-top: 15px;
+    font-size: 45px;
+    font-weight: 900;
   }
 }
-@media screen and (max-width: 800px) {
-  footer {
-    display: none;
+@media screen and (max-width: 1300px) {
+  .item2 h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+  }
+  .item2 h2 {
+    font-size: 35px;
+    font-weight: 900;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .character {
+    opacity: 0;
+    height: 70vh;
+    margin-bottom: -25px;
+    margin-top: 25px;
+  }
+
+  .content-container {
+    height: 100vh;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .item1 {
-    margin-left: -42px;
-  }
-
-  .character {
-    height: 137%;
-    width: 115%;
-  }
-
-  .mediaicons {
-    display: none;
+    width: 100%;
+    justify-content: center;
+    justify-self: center;
   }
 
   .item2 {
-    margin-left: -128px;
-    margin-top: -100px;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 150px;
+    grid-row-start: 1;
   }
   .item2 h1 {
-    font-size: 150%;
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
   }
   .item2 h2 {
-    font-size: 46%;
-  }
-  .item2 .register {
-    width: 50%;
-    font-size: 80%;
+    font-size: 35px;
+    font-weight: 900;
   }
 
-  .character {
-    margin-left: -50px;
-    height: 55vh;
-    width: 43vh;
+  .sponsors {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .item2 {
+    justify-content: center;
+    justify-self: center;
+    margin-top: 150px;
+    grid-row-start: 1;
+  }
+  .item2 h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0;
+    height: 40px;
+  }
+  .item2 h2 {
+    font-size: 20px;
+    font-weight: 900;
+  }
+}
+@media screen and (max-width: 373px) {
+  .item2 h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0;
+    height: 80px;
+  }
+  .item2 h2 {
+    font-size: 20px;
+    font-weight: 900;
   }
 }
 
