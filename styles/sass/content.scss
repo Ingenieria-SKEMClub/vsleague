@@ -93,6 +93,127 @@ body{
   width: 64px;
   padding: 5px;
 }
+.inscription-container{ /*Segunda Pantalla*/
+  font-family: $font;
+  font-weight: $weight;
+  position: absolute;
+  margin: auto;
+  margin-top: 60px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 92%;
+  color: white;
+  ::placeholder { 
+    color: white;
+    opacity: 1;
+    font-family: $font;
+    font-weight: $weight;
+  }
+  h1{
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+    font-size: 33px;
+  }
+  .steps{
+    font-family: Arsenal;
+    font-weight: normal;
+    display: flex;
+    margin-left: 710px;
+    margin-bottom: -15px;
+  }
+  .step1{
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #881A33;
+    text-align: center;
+  }
+  .line {
+    width: 30px;
+    height: 5px;
+    background-color: #881A33;
+    margin-top: 17px;
+    margin-left: -1px;
+  }
+  .step2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #881A33;
+    text-align: center;
+    padding-top: 4px;
+    margin-top: 5px;
+    margin-left: -2px;
+  }
+  .legal {
+    margin-top: -30px;
+  }
+  .legal2 {
+    margin-top: -90px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  .choose {
+    margin-top: -43px;
+    margin-left: 350px;
+  }
+  .slide {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #77CCF3;
+    border: 1px solid #77CCF3;
+  }
+  .hold {
+    width: 55px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #356780;
+    border: 1px solid #356780;
+    margin-top: -30px;
+  }
+  form{
+    width: 90%;
+    height: 60%;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    padding: 10px;
+    margin-left: 93px;
+  }
+  input[type=text]{
+    width: 90%;
+    height: 50%;
+    background: #204659;
+    border: 1px solid #204659;
+    border-radius: 13px;
+    padding-left: 8px;
+    font-family: $font;
+    font-weight: $weight;
+  }
+  input, select, textarea{
+    color: #ffffff;
+  }
+  .payment{
+    width: 140px;
+    height: 60px;
+    background: #881A33;
+    border-radius: 13px;
+    font-family: $font;
+    font-weight: $weight;
+    color: white;
+    border: 1px solid #881A33;
+    margin-top: -100px;
+  }
+}
 @media screen and (max-width: 1620px){
   .item2{
     h1{
@@ -175,6 +296,47 @@ body{
       font-weight: $weight;
     }
   }
+  .inscription-container{
+    margin-top: 90px;
+    form {
+      width: 75%;
+      height: 1%;
+      grid-row-gap: 50px;
+    }
+    .steps{
+      margin-left: 130px;
+    }
+    input[type=text]{
+      margin-left: -102px;
+      width: 364px;
+      height: 40px;
+    }
+    #form {
+      margin-top: 199px;
+      margin-left: -263px;
+      width: 364px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+    .choose {
+      margin-left: 269px;
+    }
+    .legal{
+      margin-top: 180px;
+      margin-left: -260px;
+      width: 217px;
+    }
+    .legal2{
+      margin-top: 165px;
+      margin-left: -260px;
+      width: 217px;
+    }
+    .payment{
+      margin-top: 190px;
+      margin-left: -35px;
+    }
+  }
 }
 @media screen and (max-width: 373px){
   .item2{
@@ -187,6 +349,37 @@ body{
     h2{
       font-size: 20px;
       font-weight: $weight;
+    }
+  }
+}
+@media screen and (max-height: 376px){
+  .inscription-container{
+    margin-top: 10px;
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+    .steps {
+      margin-left: 350px;
+    }
+    form {
+      margin-top: -20px;
+      margin-left: 30px;
+      height: 45%;
+    }
+    .payment {
+      margin-left: 100px;
+      margin-top: 0px;
+    }
+    .legal{
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+    .legal2{
+      margin-top: -25px;
+      margin-left: -30px;
     }
   }
 }
